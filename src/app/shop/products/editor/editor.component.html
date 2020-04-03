@@ -1,4 +1,4 @@
-<div style="width: 400px; margin: auto">
+<div style="width: 400px;margin: auto">
   <div class="uk-margin">
     <label>Nazwa</label>
     <input [(ngModel)]="product.name" class="uk-input" type="text">
@@ -12,10 +12,10 @@
     <input [(ngModel)]="product.quantity" type="number" class="uk-input">
   </div>
   <div class="uk-margin">
-    <label>Dostępny</label>
+    <label>Dostępny </label>
     <input [(ngModel)]="product.available" type="checkbox" class="uk-checkbox">
   </div>
-  <input hidden type="number">
+  <input  hidden type="number">
   <a routerLink="/shop"><input class="uk-button uk-button-danger" type="button" value="Anuluj"></a>
-  <input (click)="saveProducts(product)" class="uk-button uk-button-primary" type="submit" value="Zapisz">
+  <input (click)="saveProduct(product)" class="uk-button uk-button-primary" type="submit" value="Zapisz">
 </div>

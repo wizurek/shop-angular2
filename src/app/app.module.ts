@@ -9,7 +9,9 @@ import { ShippingComponent } from './shop/shipping/shipping.component';
 import { ProductsComponent } from './shop/products/products.component';
 import { EditorComponent } from './shop/products/editor/editor.component';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { UsersComponent } from './shop/users/users.component';
+import { EditorUsersComponent } from './shop/users/editorUsers/editorUsers.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {HttpClientModule} from '@angular/common/http';
     ShopComponent,
     ShippingComponent,
     ProductsComponent,
-    EditorComponent
+    EditorComponent,
+    UsersComponent,
+    EditorUsersComponent
   ],
   imports: [
     BrowserModule,

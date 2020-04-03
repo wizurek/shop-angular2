@@ -12,7 +12,7 @@ export class WelcomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  name: string = 'Sebastian';
+  name: string = 'Cześć!';
   welcome: string = 'Witaj w sklepie';
   enter: string = 'Wejdź';
 }

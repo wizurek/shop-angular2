@@ -17,5 +17,5 @@ export class ShippingComponent implements OnInit {
   shippingMethodName3: string = 'Kurier - pobranie';
   shippingMethodPrice1: number = 10.00;
   shippingMethodPrice2: number = 15.50;
-  shippingMethodPrice3: number = 20.50;
+  shippingMethodPrice3: number = 20.00;
 }

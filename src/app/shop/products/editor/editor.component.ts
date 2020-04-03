@@ -11,24 +11,29 @@ import {HttpClientService} from '../../../http-client.service';
 })
 export class EditorComponent implements OnInit {
 
-  constructor(private productStorage: ProductStorageService, private router: Router, private activeRoute: ActivatedRoute, private httpClient: HttpClientService) { }
-
+  constructor(private productStorage: ProductStorageService, private router: Router,
+              private activeRoute: ActivatedRoute, private httpClient: HttpClientService) { }
   product: Product = new Product();
 
   ngOnInit(): void {
     this.getProductToEdit();
   }
 
-  saveProducts(product: Product) {
-      this.httpClient.saveProduct(product).subscribe(r => this.router.navigate(['/shop']));
-  }
+  saveProduct(product: Product) {
+    this.httpClient.saveProduct(product).subscribe(r => {
+      this.router.navigate(['/shop']);
+    });
 
+
+  }
   getProductToEdit() {
     this.activeRoute.paramMap.subscribe(params => {
       const id = params.get('id');
       if (id) {
-        this.httpClient.getProduct(Number.parseInt(id)).subscribe(p => this.product = p);
+        // tslint:disable-next-line:radix
+        this.httpClient.getProduct( Number.parseInt(id)).subscribe(p => this.product = p);
       }
+
     });
   }
 }
